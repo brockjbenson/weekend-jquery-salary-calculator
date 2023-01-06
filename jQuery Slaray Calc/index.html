@@ -15,7 +15,7 @@
   </head>
   <body>
     <main>
-      <div class="header">
+      <div class="header-1">
         <h1>Employee Monthly Salary Calculator</h1>
         <div class="inputs">
           <input type="text" placeholder="First Name" id="first-name" />
@@ -23,9 +23,25 @@
           <input type="number" placeholder="ID Number" id="id-number" />
           <input type="text" placeholder="Job Title" id="job-title" />
           <input type="number" placeholder="Annual Salary" id="annual-salary" />
-          <button class="submit">Submit</button>
+          <button id="submit">Submit</button>
         </div>
       </div>
+      <div class="header-2">
+        <h2>Employees</h2>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
     </main>
   </body>
 </html>
