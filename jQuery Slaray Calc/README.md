@@ -26,4 +26,20 @@ Open the index.html file with your browser and click inspect to see the console
 5. If you see that monthly counter as red, that means it is over budget, or over $20,000
 6. Repeat with as many employees as needed.
 
-#
+# Built In 
+
+This project was built in VS Code using these langauges:
+
+    - html
+    - css
+    - javascript
+    - jquery
+
+
+# Acknowledgement 
+
+Thank you to EDA for teaching me the skills that was required to build this app
+
+# Support
+
+If you have any questions feel free to reach out to me via Slack or at brockjbenson@outlook.com
