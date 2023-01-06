@@ -3,6 +3,7 @@ $(function () {
   console.log("In jquery");
 
   $("#submit").on("click", handleSubmit); // Adding our first event listener to be on the click of our submit button
+  $("#table-body").on("click", ".delete", delEmp); // adding our event listener to delete an employee off of the table by targeting our table-body since it is already on the dom from the html code
 });
 
 const employees = []; // Create an array to store the employees
@@ -18,6 +19,9 @@ function addToEmployees(first, last, id, title, salary) {
     annualSalary: salary,
   };
   employees.push(employee); // Push the object into our array
+
+  counter += Number(employee.annualSalary);
+  $("#monthly-counter").text(counter);
 }
 
 function appendEmp() {
@@ -34,10 +38,18 @@ function appendEmp() {
       <td>${element.lastName}</td>
       <td>${element.idNumber}</td>
       <td>${element.jobTitle}</td>
-      <td>${element.annualSalary}</td>
+      <td>$${element.annualSalary}</td>
+      <td><button class="delete">X</button></td> 
       </tr>
       `);
+    // added a delete button and appeneded into table-body when a new employee is added
   }
+}
+let counter = 0;
+
+function delEmp(event) {
+  // Creating our delete event by using the event.target and using the .closest() to go to the next tr that it finds, and then removing it using the .remove()
+  $(event.target).closest("tr").remove();
 }
 
 function handleSubmit() {
