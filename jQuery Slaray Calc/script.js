@@ -20,8 +20,8 @@ function addToEmployees(first, last, id, title, salary) {
   };
   employees.push(employee); // Push the object into our array
 
-  counter += Number(employee.annualSalary);
-  $("#monthly-counter").text(counter);
+  counter += Number(employee.annualSalary); // taking our counter var and incrementing it by our employee salary and turning it into a number using Numbber()
+  $("#monthly-counter").text(counter); // targeting our id for the counter on the webpage and updating it with the counter var
 }
 
 function appendEmp() {
@@ -38,18 +38,21 @@ function appendEmp() {
       <td>${element.lastName}</td>
       <td>${element.idNumber}</td>
       <td>${element.jobTitle}</td>
-      <td>$${element.annualSalary}</td>
+      <td class="salary">$${element.annualSalary}</td>
       <td><button class="delete">X</button></td> 
       </tr>
       `);
     // added a delete button and appeneded into table-body when a new employee is added
   }
 }
-let counter = 0;
+let counter = 0; // added a counter var to use for the pages salary counter
 
 function delEmp(event) {
   // Creating our delete event by using the event.target and using the .closest() to go to the next tr that it finds, and then removing it using the .remove()
   $(event.target).closest("tr").remove();
+  let count = $(event.target).closest("tr").find(".salary").text();
+  counter -= Number(count);
+  $("#monthly-counter").text(counter);
 }
 
 function handleSubmit() {
