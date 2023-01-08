@@ -8,6 +8,8 @@ This project is being created to be able to figure out how much we are paying ou
 With this app, we will be able to take our employee and some of their information, and add it to a table to see their info in, and to also take their salary.
 We will also be able to see a total of how much we would be paying each employee in the table each month. It is going to show us if the monthly allowance goes over budget ($20,000) by turning it red
 
+You are able to remove indviual employees and see the counter color and counter number adjust accordingly
+
 # Screen Shot
 
 Example of monthly balance being under 20,000 ![Screen Shot](monthly-green.png)
