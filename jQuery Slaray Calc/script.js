@@ -24,12 +24,14 @@ function addToEmployees(first, last, id, title, salary) {
   $("#monthly-counter").text(counter); // targeting our id for the counter on the webpage and updating it with the counter var
 }
 
-function removeEmp(emp) { // Creating a function to remove the employee from our array of employees
-  for (let i = 0; i < employees.length; i++) { 
-    for (let j = 0; j < emp.length; j++) {}
+function removeEmp(emp) {
+  // Creating a function to remove the employee from our array of employees
+  for (let i = 0; i < employees.length; i++) {
+    // Loop over employees array
+    for (let j = 0; j < emp.length; j++) {} // loop over the employee objects
   }
 
-  employees.pop(emp);
+  employees.pop(emp); // pop the employee object from the employees array
 }
 
 function appendEmp() {
@@ -54,7 +56,9 @@ function appendEmp() {
   }
 
   if (counter > 20000) {
-    $(".counter").css("background-color", "red");
+    $("#monthly-counter").css("color", "red"); // create else if statement to change the color of the counter each time we enter a new employee based on our critera
+  } else if (counter < 20000) {
+    $("#monthly-counter").css("color", "green");
   }
 }
 let counter = 0; // added a counter var to use for the pages salary counter
@@ -62,11 +66,17 @@ let counter = 0; // added a counter var to use for the pages salary counter
 function delEmp(event) {
   // Creating our delete event by using the event.target and using the .closest() to go to the next tr that it finds, and then removing it using the .remove()
   $(event.target).closest("tr").remove();
-  let count = $(event.target).closest("tr").find(".salary").text();
-  counter -= Number(count);
-  $("#monthly-counter").text(Number(counter));
+  let count = $(event.target).closest("tr").find(".salary").text(); // Setting up our decrementing by setting a new var count to the closest tr with the class .salary
+  counter -= Number(count); // taking our new var count as a number and decrementing it from our counter global var
+  $("#monthly-counter").text(Number(counter)); // updating our counter in the html with our new counter number
 
-  removeEmp($(event.target).closest("tr"));
+  removeEmp($(event.target).closest("tr")); // Call our removeEmp function in delEmp function to delete the employee that we click on from the employees array
+
+  if (counter > 20000) {
+    $("#monthly-counter").css("color", "red"); // create if else for the css style of the counter to update as we remove employees
+  } else if (counter < 20000) {
+    $("#monthly-counter").css("color", "green");
+  }
 }
 
 function handleSubmit() {
