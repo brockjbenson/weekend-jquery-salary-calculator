@@ -11,7 +11,7 @@ We will also be able to see a total of how much we would be paying each employee
 # Screen Shot
 
 Example of monthly balance being under 20,000 ![Screen Shot](monthly-green.png)
-Example of monthly balance being over 20,000
+Example of monthly balance being over 20,000 ![Screen Shot](monthly-red.png)
 
 # Installation
 
