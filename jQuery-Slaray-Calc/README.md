@@ -10,7 +10,7 @@ We will also be able to see a total of how much we would be paying each employee
 
 # Screen Shot
 
-Example of monthly balance being under 20,000 ![Screen Shot](/weekend-jquery-salary-calculator/jQuery%20Slaray%20Calc/monthly-green.png)
+Example of monthly balance being under 20,000 ![Screen Shot](/weekend-jquery-salary-calculator/jQuery-Slaray-Calc/monthly-green.png)
 Example of monthly balance being over 20,000
 
 # Installation
