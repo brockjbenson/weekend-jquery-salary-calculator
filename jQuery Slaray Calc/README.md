@@ -2,31 +2,31 @@
 
 # Description
 
-Duration: 
+Duration:
 
 This project is being created to be able to figure out how much we are paying our employees on a monthly basis.
-With this app, we will be able to take our employee and some of their information, and add it to a table to see their info in, and to also take their salary. 
+With this app, we will be able to take our employee and some of their information, and add it to a table to see their info in, and to also take their salary.
 We will also be able to see a total of how much we would be paying each employee in the table each month. It is going to show us if the monthly allowance goes over budget ($20,000) by turning it red
 
 # Screen Shot
 
-screen shots will go here
+Example of monthly balance being under 20,000 ![Screen Shot](/weekend-jquery-salary-calculator/monthly-green.png)
+Example of monthly balance being over 20,000 
 
-
-# Installation 
+# Installation
 
 Open the index.html file with your browser and click inspect to see the console
 
-# Usage 
+# Usage
 
 1. Take your employees information and enter it into the input fields, they will be labeled accordingly
 2. Once you have entered your employees information, hit the submit button at the end
-3. Look at the table below as that employee will be added to the table 
+3. Look at the table below as that employee will be added to the table
 4. Look at the monthly counter to see how much you are paying your employees each month in total
 5. If you see that monthly counter as red, that means it is over budget, or over $20,000
 6. Repeat with as many employees as needed.
 
-# Built In 
+# Built In
 
 This project was built in VS Code using these langauges:
 
@@ -35,11 +35,12 @@ This project was built in VS Code using these langauges:
     - javascript
     - jquery
 
-
-# Acknowledgement 
+# Acknowledgement
 
 Thank you to EDA for teaching me the skills that was required to build this app
 
 # Support
 
 If you have any questions feel free to reach out to me via Slack or at brockjbenson@outlook.com
+
+[monthly-green.png]: monthly-green.png

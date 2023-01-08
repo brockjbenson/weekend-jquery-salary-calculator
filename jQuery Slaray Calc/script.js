@@ -20,7 +20,7 @@ function addToEmployees(first, last, id, title, salary) {
   };
   employees.push(employee); // Push the object into our array
 
-  counter += Number(employee.annualSalary / 12); // taking our counter var and incrementing it by our employee salary and turning it into a number using Numbber() and diving by 12 to get monthly
+  counter += Math.round(Number(employee.annualSalary / 12)); // taking our counter var and incrementing it by our employee salary and turning it into a number using Numbber() and diving by 12 to get monthly and also round to nearest dollar
   $("#monthly-counter").text(counter); // targeting our id for the counter on the webpage and updating it with the counter var
 }
 
@@ -67,7 +67,7 @@ function delEmp(event) {
   // Creating our delete event by using the event.target and using the .closest() to go to the next tr that it finds, and then removing it using the .remove()
   $(event.target).closest("tr").remove();
   let count = $(event.target).closest("tr").find(".salary").text(); // Setting up our decrementing by setting a new var count to the closest tr with the class .salary
-  counter -= Number(count) / 12; // taking our new var count as a number and decrementing it from our counter global var and dividing by 12 to get monthly
+  counter -= Math.round(Number(count) / 12); // taking our new var count as a number and decrementing it from our counter global var and dividing by 12 to get monthly and round to nearest dollar
   $("#monthly-counter").text(Number(counter)); // updating our counter in the html with our new counter number
 
   removeEmp($(event.target).closest("tr")); // Call our removeEmp function in delEmp function to delete the employee that we click on from the employees array
