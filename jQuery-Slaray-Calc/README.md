@@ -24,7 +24,8 @@ Open the index.html file with your browser and click inspect to see the console
 3. Look at the table below as that employee will be added to the table
 4. Look at the monthly counter to see how much you are paying your employees each month in total
 5. If you see that monthly counter as red, that means it is over budget, or over $20,000
-6. Repeat with as many employees as needed.
+6. If you added the wrong information, you can delete indviudal employees by hitting the X on the right side
+7. Repeat with as many employees as needed.
 
 # Built In
 
