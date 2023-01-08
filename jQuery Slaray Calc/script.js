@@ -24,6 +24,14 @@ function addToEmployees(first, last, id, title, salary) {
   $("#monthly-counter").text(counter); // targeting our id for the counter on the webpage and updating it with the counter var
 }
 
+function removeEmp(emp) { // Creating a function to remove the employee from our array of employees
+  for (let i = 0; i < employees.length; i++) { 
+    for (let j = 0; j < emp.length; j++) {}
+  }
+
+  employees.pop(emp);
+}
+
 function appendEmp() {
   // Create our appending function to append to the dom
   $("#table-body").empty(); // Use this to clear the children of table-body
@@ -38,11 +46,15 @@ function appendEmp() {
       <td>${element.lastName}</td>
       <td>${element.idNumber}</td>
       <td>${element.jobTitle}</td>
-      <td class="salary">$${element.annualSalary}</td>
+      <td class="salary">${element.annualSalary}</td>
       <td><button class="delete">X</button></td> 
       </tr>
       `);
     // added a delete button and appeneded into table-body when a new employee is added
+  }
+
+  if (counter > 20000) {
+    $(".counter").css("background-color", "red");
   }
 }
 let counter = 0; // added a counter var to use for the pages salary counter
@@ -52,7 +64,9 @@ function delEmp(event) {
   $(event.target).closest("tr").remove();
   let count = $(event.target).closest("tr").find(".salary").text();
   counter -= Number(count);
-  $("#monthly-counter").text(counter);
+  $("#monthly-counter").text(Number(counter));
+
+  removeEmp($(event.target).closest("tr"));
 }
 
 function handleSubmit() {
