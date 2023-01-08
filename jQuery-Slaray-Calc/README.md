@@ -2,7 +2,7 @@
 
 # Description
 
-Duration:
+Duration: 10 Hours
 
 This project is being created to be able to figure out how much we are paying our employees on a monthly basis.
 With this app, we will be able to take our employee and some of their information, and add it to a table to see their info in, and to also take their salary.
