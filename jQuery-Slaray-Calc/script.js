@@ -4,7 +4,7 @@ $(function () {
 
   $("#submit").on("click", handleSubmit); // Adding our first event listener to be on the click of our submit button
   $("#table-body").on("click", ".delete", delEmp); // adding our event listener to delete an employee off of the table by targeting our table-body since it is already on the dom from the html code
-});
+}); 
 
 const employees = []; // Create an array to store the employees
 
